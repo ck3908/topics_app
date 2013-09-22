@@ -1,0 +1,18 @@
+<% content_for :title do %>
+	Home
+<% end %>
+<h1>Pages#home</h1>
+<%= form_tag do %>
+    <%= label_tag "categories" %>
+    <%#= select_tag 'categories', options_for_select(@categories.map{ |value| [value,value]}, @selected_category) %>
+    <!-- alternatively if value and options are the same then just use @categories and rails will figure out same value pairs -->
+    <%= select_tag 'categories', options_for_select(@categories, @selected_category) %>
+    <%= submit_tag "Submit your info" %>
+<% end %>
+
+<!-- show params only on commit -->
+<%= @categories.inspect %>
+
+<% if params[:commit]  %>
+    <%= show_params %>
+<% end %>

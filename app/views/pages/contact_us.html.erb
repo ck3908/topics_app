@@ -1,0 +1,22 @@
+<% content_for :title do %>
+	Contact Us
+<% end %>
+
+<h1> contact us </h1>
+
+<%= form_tag do %>
+<%= label_tag "name" %>
+<!-- another way to make name required is have it required on the tag -->
+<%#= text_field_tag "name", nil, class: 'sampleclass', required: 'required' %>
+<%= text_field_tag "name", nil, class: 'sampleclass' %><br/>
+<%= label_tag "email address" %>
+<%= email_field_tag "email address" %><br/>
+<%= submit_tag "Submit your info" %>
+<% end %>
+
+<!-- show params only on commit -->
+<%= @categories.inspect %>
+
+<% if params[:commit]  %>
+	<%= show_params %>
+<% end %>
