@@ -1,5 +1,7 @@
 Concept::Application.routes.draw do
 
+  resources :topics
+
   get "pages/home"
   get "pages/ideas"
   get "pages/login"
