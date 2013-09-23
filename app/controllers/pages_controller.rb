@@ -9,7 +9,7 @@ class PagesController < ApplicationController
   end
 
   def ideas
-    @yeardate = params[:year]
+    @topics = Topic.all
   end
 
   def login

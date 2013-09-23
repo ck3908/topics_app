@@ -1,7 +1,17 @@
 <% content_for :title do %>
 	Ideas
 <% end %>
-<h1>Pages#ideas</h1>
-<p>Find me in app/views/pages/ideas.html.erb</p>
+<p> In the Ideas html erb</p>
+<%=  @topics.each do |topic| %>
+    <section style="border: 1px solid black;padding: 10px;margin: 10px">
+      <h1><%= topic.title %><br/></h1>
+      Sector: <%= topic.sector %> <br/>
+      Made by: <%= topic.made_by %><br/>
+      Content: <%= topic.content %><br/>
+      Time created: <%= topic.created_at %>
+
+    </section>
+
+<% end %>
 
 
