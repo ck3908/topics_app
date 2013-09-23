@@ -16,7 +16,7 @@
   <tbody>
     <% @topics.each do |topic| %>
       <tr>
-        <td><%= topic.title %></td>
+        <td><%= link_to topic.title, topic %></td>  <!-- clickable link to show page for each topic -->
         <td><%= topic.sector %></td>
         <td><%= topic.content %></td>
         <td><%= topic.made_by %></td>

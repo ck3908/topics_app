@@ -1,9 +1,13 @@
 class TopicsController < ApplicationController
-  before_action :set_topic, only: [:show, :edit, :update, :destroy]
+ before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   # GET /topics
   # GET /topics.json
   def index
+    @topics = Topic.all
+  end
+
+  def list
     @topics = Topic.all
   end
 
@@ -20,6 +24,7 @@ class TopicsController < ApplicationController
   # GET /topics/1/edit
   def edit
   end
+
 
   # POST /topics
   # POST /topics.json

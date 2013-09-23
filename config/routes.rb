@@ -1,7 +1,15 @@
 Concept::Application.routes.draw do
 
-  resources :topics
+  # resources :topics   commented this out so we can use custom methods in combination of scaffold
 
+  resources :topics do
+    collection do
+      get :list
+    end
+  end
+  #get "topics/list(.:format)", to: "topics#list", as: :topics_list
+
+  # legacy stuff just keeping in there reference
   get "pages/home"
   get "pages/ideas"
   get "pages/login"
@@ -10,13 +18,13 @@ Concept::Application.routes.draw do
   post "pages/contact_us"
   post "pages/home"
   
-  get 'topics/whocares', to: 'topics#whocares'
+  # get 'topics/whocares', to: 'topics#whocares'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  root 'pages#home'
+  root "topics#index"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
