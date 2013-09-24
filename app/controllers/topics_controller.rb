@@ -4,12 +4,14 @@ class TopicsController < ApplicationController
   # GET /topics
   # GET /topics.json
   def index
-    @topics = Topic.all
+    # @topics = Topic.all   - use will paginate gem instead
+    @topics = Topic.order("sector ASC").paginate(:page => params[:page], per_page: 15)
   end
 
  # show detailed info of list
   def list
-    @topics = Topic.all
+    # @topics = Topic.all   - use will paginate gem instead
+    @topics = Topic.paginate(:page => params[:page], per_page: 5)
   end
 
   # GET /topics/1

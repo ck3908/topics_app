@@ -6,6 +6,9 @@ gem 'rails', '4.0.0'
 # install faker gem to add fake data
 gem 'faker'
 
+# paginate the index site
+gem 'will_paginate', '~> 3.0'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 

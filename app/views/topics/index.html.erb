@@ -1,5 +1,7 @@
 <h1>Listing topics</h1>
 
+<%= will_paginate @topics %>
+
 <table>
   <thead>
     <tr>
@@ -31,5 +33,6 @@
 </table>
 
 <br>
+<%= will_paginate @topics %>
 
 <%= link_to 'New Topic', new_topic_path %>

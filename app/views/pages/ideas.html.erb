@@ -1,7 +1,9 @@
 <% content_for :title do %>
 	Ideas
 <% end %>
-<p> In the Ideas html erb</p>
+
+
+
 <%=  @topics.each do |topic| %>
     <section style="border: 1px solid black;padding: 10px;margin: 10px">
       <h1><%= topic.title %><br/></h1>
@@ -11,7 +13,6 @@
       Time created: <%= topic.created_at %>
 
     </section>
-
 <% end %>
 
 

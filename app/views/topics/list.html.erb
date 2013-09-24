@@ -1,7 +1,7 @@
 <% content_for :title do %>
     Listing Ideas
 <% end %>
-<p> In the Ideas html erb</p>
+<%= will_paginate @topics %>
 <%=  @topics.each do |topic| %>
     <section style="border: 1px solid black;padding: 10px;margin: 10px">
       <h1><%= topic.title %><br/></h1>
@@ -13,3 +13,5 @@
     </section>
 
 <% end %>
+
+<%= will_paginate @topics %>
