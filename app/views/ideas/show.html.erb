@@ -1,14 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Index:</strong>
-  <%= @idea.index %>
+  <strong>Title:</strong>
+  <%= @topic.title %>
 </p>
 
 <p>
-  <strong>Show:</strong>
-  <%= @idea.show %>
+  <strong>Sector:</strong>
+  <%= @topic.sector %>
 </p>
 
-<%= link_to 'Edit', edit_idea_path(@idea) %> |
-<%= link_to 'Back', ideas_path %>
+<p>
+  <strong>Content:</strong>
+  <%= @topic.content %>
+</p>
+
+<p>
+  <strong>Made by:</strong>
+  <%= @topic.made_by %>
+</p>
+
+<%= link_to 'Edit', edit_topic_path(@topic) %> |
+<%= link_to 'Back', topics_path %>

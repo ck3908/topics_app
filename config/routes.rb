@@ -7,6 +7,9 @@ Concept::Application.routes.draw do
       get :list
     end
   end
+
+  get "ideas/index"
+  get "ideas/:id" => "ideas#show"
   #get "topics/list(.:format)", to: "topics#list", as: :topics_list
 
   # legacy stuff just keeping in there reference

@@ -1,5 +1,6 @@
 class TopicsController < ApplicationController
  before_action :set_topic, only: [:show, :edit, :update, :destroy]
+  # This controller is for admin views
 
   # GET /topics
   # GET /topics.json
@@ -17,6 +18,7 @@ class TopicsController < ApplicationController
   # GET /topics/1
   # GET /topics/1.json
   def show
+    @topic = Topic.find(params[:id])
   end
 
   # GET /topics/new
