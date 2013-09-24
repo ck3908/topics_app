@@ -7,6 +7,7 @@
       <th>Sector</th>
       <th>Content</th>
       <th>Made by</th>
+      <th>Time created</th>
       <th></th>
       <th></th>
       <th></th>
@@ -18,8 +19,9 @@
       <tr>
         <td><%= link_to topic.title, topic %></td>  <!-- clickable link to show page for each topic -->
         <td><%= topic.sector %></td>
-        <td><%= topic.content %></td>
+        <td><%= truncate(topic.content, length: 90) %></td>
         <td><%= topic.made_by %></td>
+        <td><%= topic.created_at %></td>
         <td><%= link_to 'Show', topic %></td>
         <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
         <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>

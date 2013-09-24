@@ -7,6 +7,7 @@ class TopicsController < ApplicationController
     @topics = Topic.all
   end
 
+ # show detailed info of list
   def list
     @topics = Topic.all
   end
