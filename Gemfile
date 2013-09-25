@@ -9,6 +9,8 @@ gem 'faker'
 # paginate the index site
 gem 'will_paginate', '~> 3.0'
 
+gem 'devise'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 

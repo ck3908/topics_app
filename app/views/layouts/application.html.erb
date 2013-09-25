@@ -118,6 +118,10 @@ accusata ex.
       <% if flash[:error] %>
           <p class="error"><%= flash[:error].html_safe %></p>
           <% end %>
+    <!-- add alert for devise gem requirement -->
+    <% if flash[:alert] %>
+        <p class="error"><%= flash[:alert].html_safe %></p>
+    <% end %>
   </div>
 
 <div class='featurebox_center'>
