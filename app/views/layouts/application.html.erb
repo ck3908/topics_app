@@ -110,6 +110,14 @@ accusata ex.
 
 <div id="content">
 
+ <h2>
+   Welcome <% if user_signed_in? %>
+            <%= current_user.email %>
+           <% else %>
+            <%= " to TopicPortal" %>
+            <% end %>
+ </h2>
+
 <h3>Center Content Title</h3>
   <div style = 'border:1px red solid; margin: 10px'>
       <% if flash[:notice] %>
@@ -163,7 +171,11 @@ accusata ex.
 <div id="footer">
   <%= link_to_unless_current "Home", ideas_path %> |
   <%= link_to_unless_current "Ideas", list_ideas_path %> |
-  <%= link_to_unless_current "Login", pages_login_path %> |
+  <% if user_signed_in? %>
+        <%= link_to('Logout', destroy_user_session_path, :method => :delete) %> |
+  <% else %>
+        <%= link_to('Login', new_user_session_path)  %> |
+  <% end %>
   <%= link_to_unless_current "New Idea", pages_new_idea_path %> |
   <%= link_to_unless_current "Contact Us", pages_contact_us_path %>
 

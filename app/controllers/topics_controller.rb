@@ -1,4 +1,5 @@
 class TopicsController < ApplicationController
+ before_filter :authenticate_user!
  before_action :set_topic, only: [:show, :edit, :update, :destroy]
   # This controller is for admin views
 
