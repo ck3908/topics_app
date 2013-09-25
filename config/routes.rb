@@ -8,8 +8,19 @@ Concept::Application.routes.draw do
     end
   end
 
-  get "ideas/index"
-  get "ideas/:id" => "ideas#show"
+  resources :ideas do
+    collection do
+      get :list
+    end
+  end
+
+  #resources :ideas, :only => ['index','list']
+  #resources :ideas, :except => ['show', 'update', 'destroy','create','edit','new']
+
+  #get "ideas", to: "ideas#index", as: :ideas
+  get "ideas/:id(.:format)", to: "ideas#show", as: :ideas_id
+  #get "ideas/list(.:format)", to: "ideas#list", as: :list_ideas
+
   #get "topics/list(.:format)", to: "topics#list", as: :topics_list
 
   # legacy stuff just keeping in there reference
@@ -28,6 +39,7 @@ Concept::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   root "topics#index"
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

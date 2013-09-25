@@ -14,6 +14,11 @@ class IdeasController < ApplicationController
     @topic = Topic.find(params[:id])
   end
 
+  # show detailed info of list
+  def list
+    # @topics = Topic.all   - use will paginate gem instead
+    @topics = Topic.paginate(:page => params[:page], per_page: 5)
+  end
 
   private
 

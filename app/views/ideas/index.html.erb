@@ -1,3 +1,7 @@
+<% content_for :title do %>
+    Ideas
+<% end %>
+
 <h1>Listing topics</h1>
 
 <%= will_paginate @topics %>
@@ -19,14 +23,14 @@
   <tbody>
   <% @topics.each do |topic| %>
       <tr>
-        <td><%= link_to topic.title, topic %></td>  <!-- clickable link to show page for each topic -->
+        <!-- change link to ideas_id_path and pass to it the id of the topic to show -->
+        <td><%= link_to topic.title, ideas_id_path(topic.id) %></td>  <!-- clickable link to show page for each topic -->
         <td><%= topic.sector %></td>
         <td><%= truncate(topic.content, length: 90) %></td>
         <td><%= topic.made_by %></td>
         <td><%= topic.created_at %></td>
-        <td><%= link_to 'Show', topic %></td>
-        <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
-        <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <!-- remove edit and destroy and modify path to ideas_index -->
+        <td><%= link_to 'Show', ideas_id_path(topic.id) %></td>
       </tr>
   <% end %>
   </tbody>
@@ -34,5 +38,5 @@
 
 <br>
 <%= will_paginate @topics %>
-
+<br>
 <%= link_to 'New Topic', new_topic_path %>
