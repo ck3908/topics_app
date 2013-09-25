@@ -112,7 +112,8 @@ accusata ex.
 
  <h2>
    Welcome <% if user_signed_in? %>
-            <%= current_user.email %>
+            <%= current_user.name %>
+            <%= if current_user.admin? then " - Admin User" end %>
            <% else %>
             <%= " to TopicPortal" %>
             <% end %>

@@ -29,8 +29,12 @@
         <td><%= truncate(topic.content, length: 90) %></td>
         <td><%= topic.made_by %></td>
         <td><%= topic.created_at %></td>
-        <!-- remove edit and destroy and modify path to ideas_index -->
+        <!-- modify access to edit and destroy and modify path to ideas_index -->
         <td><%= link_to 'Show', ideas_id_path(topic.id) %></td>
+        <% if user_signed_in? && current_user.admin? %>
+            <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
+            <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
   <% end %>
   </tbody>
