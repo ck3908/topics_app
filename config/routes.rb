@@ -1,5 +1,7 @@
 Concept::Application.routes.draw do
 
+  resources :reviews
+
   devise_for :users
   # resources :topics   commented this out so we can use custom methods in combination of scaffold
 

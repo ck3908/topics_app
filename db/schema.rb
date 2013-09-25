@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130925024015) do
+ActiveRecord::Schema.define(version: 20130925044435) do
+
+  create_table "reviews", force: true do |t|
+    t.string   "title"
+    t.string   "author"
+    t.text     "content"
+    t.integer  "rating"
+    t.integer  "topic_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "reviews", ["topic_id"], name: "index_reviews_on_topic_id"
 
   create_table "topics", force: true do |t|
     t.string   "title"

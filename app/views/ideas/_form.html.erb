@@ -1,25 +1,33 @@
-<%= form_for(@idea) do |f| %>
-  <% if @idea.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@idea.errors.count, "error") %> prohibited this idea from being saved:</h2>
+<%= form_for(@topic) do |f| %>
+    <% if @topic.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@topic.errors.count, "error") %> prohibited this topic from being saved:</h2>
 
-      <ul>
-      <% @idea.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% @topic.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :index %><br>
-    <%= f.text_field :index %>
-  </div>
-  <div class="field">
-    <%= f.label :show %><br>
-    <%= f.text_field :show %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="field">
+      <%= f.label :sector %><br>
+      <%= f.text_field :sector %>
+    </div>
+    <div class="field">
+      <%= f.label :content %><br>
+      <%= f.text_area :content, style: "width:880px; height:150px;" %>
+    </div>
+    <div class="field">
+      <%= f.label :made_by %><br>
+      <%= f.text_field :made_by %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>

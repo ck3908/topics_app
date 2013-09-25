@@ -1,4 +1,5 @@
 class IdeasController < ApplicationController
+  before_filter :authenticate_user!, only: [:new]
   before_action :set_topic, only: [:show]
   # This controller is for user views - uses the model from Topic
 
@@ -12,6 +13,11 @@ class IdeasController < ApplicationController
   # GET /ideas/1.json
   def show
     @topic = Topic.find(params[:id])
+  end
+
+  # GET /ideas/new
+  def new
+    @topic = Topic.new
   end
 
   # show detailed info of list
