@@ -7,7 +7,8 @@ class TopicsController < ApplicationController
   # GET /topics.json
   def index
     # @topics = Topic.all   - use will paginate gem instead
-    @topics = Topic.order("sector ASC").paginate(:page => params[:page], per_page: 15)
+    # @topics = Topic.order("sector ASC").paginate(:page => params[:page], per_page: 15)
+    @topics = Topic.paginate(:page => params[:page], per_page: 15)
   end
 
  # show detailed info of list

@@ -21,3 +21,15 @@
 </p>
 
 <%= link_to 'Back', ideas_path %>
+
+<% @topic.reviews.each do |review| %>
+    <hr>
+    <div>
+    <b> <%= review.title %></b><br/>
+    <%= time_ago_in_words(review.created_at) %> ago, by
+    <b> <%= review.author %></b><br/>
+    <p> <%= review.content %></p>
+     rating: <%= review.rating %>
+    </div>
+
+<% end %>

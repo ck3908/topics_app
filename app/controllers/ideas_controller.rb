@@ -6,7 +6,8 @@ class IdeasController < ApplicationController
   # GET /ideas
   # GET /ideas.json
   def index
-    @topics = Topic.order("sector ASC").paginate(:page => params[:page], per_page: 15)
+    # @topics = Topic.order("sector ASC").paginate(:page => params[:page], per_page: 15)
+    @topics = Topic.paginate(:page => params[:page], per_page: 15)
   end
 
   # GET /ideas/1
