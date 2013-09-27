@@ -177,7 +177,8 @@ accusata ex.
   <% else %>
         <%= link_to('Login', new_user_session_path)  %> |
   <% end %>
-  <%= link_to_unless_current "New Idea", new_idea_path %> |
+  <%#= link_to_unless_current "New Idea", new_idea_path %> |
+  <%= link_to_unless_current "New Idea", pages_new_idea_path %> |
   <%= link_to_unless_current "Contact Us", pages_contact_us_path %>
 
 <br />

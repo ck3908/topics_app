@@ -1,14 +1,16 @@
 Concept::Application.routes.draw do
 
-  resources :reviews
+ # resources :reviews
 
   devise_for :users
   # resources :topics   commented this out so we can use custom methods in combination of scaffold
 
+  # nest reviews under topics
   resources :topics do
     collection do
       get :list
     end
+    resources :reviews
   end
 
   resources :ideas do
@@ -21,9 +23,9 @@ Concept::Application.routes.draw do
   #resources :ideas, :except => ['show', 'update', 'destroy','create','edit','new']
 
   #get "ideas", to: "ideas#index", as: :ideas
-  get "ideas/:id(.:format)", to: "ideas#show", as: :ideas_id
-  #get "ideas/list(.:format)", to: "ideas#list", as: :list_ideas
 
+  #get "ideas/list", to: "ideas#list", as: :list_ideas
+  get "ideas/:id(.:format)", to: "ideas#show", as: :ideas_id
   #get "topics/list(.:format)", to: "topics#list", as: :topics_list
 
   # legacy stuff just keeping in there reference
