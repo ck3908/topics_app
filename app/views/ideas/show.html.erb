@@ -2,7 +2,11 @@
 
 <p>
   <strong>Title:</strong>
-  <%= @topic.title %>
+  <%= @topic.title %><br/>
+  Average Rating:
+  <% @topic.reviews.average(:rating).to_i.times do %>
+      <%= image_tag "thumbsup.jpg", size: "50x50" %>
+  <% end %>
 </p>
 
 <p>
@@ -29,7 +33,11 @@
     <%= time_ago_in_words(review.created_at) %> ago, by
     <b> <%= review.author %></b><br/>
     <p> <%= review.content %></p>
-     rating: <%= review.rating %>
+     <!-- rating: <%#= review.rating %>  -->
+      <% review.rating.to_i.times do %>
+        <%= image_tag "thumbsup.jpg", size: "50x50" %>
+      <% end %>
+
     </div>
 
 <% end %>
@@ -52,11 +60,11 @@
     </div>
     <div class="field">
       <%= f.label :content %><br>
-      <%= f.text_area :content %>
+      <%= f.text_area :content, style: "width:880px; height:150px;" %>
     </div>
     <div class="field">
       <%= f.label :rating %><br>
-      <%= f.number_field :rating %>
+      <%= f.select(:rating, options_for_select(1..10)) %>
     </div>
     <div class="actions">
       <%= f.submit %>

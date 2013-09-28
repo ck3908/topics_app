@@ -25,17 +25,11 @@ class ReviewsController < ApplicationController
   # POST /reviews
   # POST /reviews.json
   def create
-    @review = Review.new(review_params)
+    # nested routes created :topic_id to access the correct topic
+    @topic = Topic.find(params[:topic_id])
+    @review = @topic.reviews.create(title: params[:review][:title], author: params[:review][:author], content: params[:review][:content], rating: params[:review][:rating])
+    redirect_to idea_path(@topic)
 
-    respond_to do |format|
-      if @review.save
-        format.html { redirect_to @review, notice: 'Review was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @review }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @review.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   # PATCH/PUT /reviews/1
@@ -72,4 +66,5 @@ class ReviewsController < ApplicationController
     def review_params
       params.require(:review).permit(:title, :author, :content, :rating, :topic_id)
     end
+
 end
