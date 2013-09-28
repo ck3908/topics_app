@@ -31,7 +31,10 @@
     <div>
      <!-- delete path is not explicitly defined in routes but we can use method :delete to call appropriate destroy action -->
      <!-- need to pass in two params arguments for path so the delete method can look up the topic and review ids to destroy -->
-    <b> <%= review.title %></b><%= link_to ' Remove', topic_review_path(review.topic, review), data: { confirm: 'delete' }, method: :delete %>
+    <b> <%= review.title %></b>
+     <% if user_signed_in? && current_user.admin? %>
+      <%= link_to ' Remove - By Admin User', topic_review_path(review.topic, review), data: { confirm: 'delete' }, method: :delete %>
+     <% end %>
     <br/>
     <%= time_ago_in_words(review.created_at) %> ago, by
     <b> <%= review.author %></b><br/>
