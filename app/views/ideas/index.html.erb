@@ -44,5 +44,3 @@
 <%= will_paginate @topics %>
 <br>
 <%= link_to 'New Topic', new_idea_path %> | <%= if !user_signed_in? then "User must sign in first" else "Click to start new Topic" end %>
-<!-- temp fix -->
-<%#= link_to 'New Topic', pages_new_idea_path %> | <%= if !user_signed_in? then "User must sign in first" else "Click to start new Topic" end %>

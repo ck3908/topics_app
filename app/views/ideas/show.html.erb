@@ -69,7 +69,7 @@
       <%= f.text_area :content, style: "width:880px; height:150px;" %>
     </div>
     <div class="field">
-      <%= f.label :rating %><br>
+      <%= f.label :rating %><%= " (10 means best rating)" %><br>
       <%= f.select(:rating, options_for_select(1..10)) %>
     </div>
     <div class="actions">

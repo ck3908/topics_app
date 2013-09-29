@@ -27,6 +27,23 @@ class IdeasController < ApplicationController
     @topics = Topic.paginate(:page => params[:page], per_page: 5)
   end
 
+  def contact_us
+    # correct syntax for hash with two words: @contact = params[:"contact us"] - put "contact us" in the field_tag name too.
+    @name = params[:name]
+    @email = params[:"email address"]
+    if params[:commit]
+      flash[:error] = ""
+      if @name.nil? || @name.empty?
+        flash.now[:error] << "name can't be blank.<br/>"
+      end
+      if @email.nil? || @email.empty?
+        flash.now[:error] << "email can't be blank.<br/>"
+      end
+    end
+    # flash[:notice] = "there might be a problem"
+
+  end
+
   private
 
   # copy from Topics Controller

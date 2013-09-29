@@ -13,11 +13,17 @@ Concept::Application.routes.draw do
     resources :reviews
   end
 
+  # add new routes to create contact us page, make sure before resources otherwise show method gets called first
+  get "ideas/contact_us"
+  post "ideas/contact_us"
+
   resources :ideas do
     collection do
       get :list
     end
   end
+
+
 
   #resources :ideas, :only => ['index','list']
   #resources :ideas, :except => ['show', 'update', 'destroy','create','edit','new']
