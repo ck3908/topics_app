@@ -1,6 +1,13 @@
 <% content_for :title do %>
     Listing Ideas
 <% end %>
+<div>
+  <%= form_tag({controller:  "ideas", action:  "list"}, method: "get") do %>
+    Ordering options:
+    <%= select_tag "ordering", options_for_select(@columns, selected: params[:ordering]) %>
+    <%= submit_tag "sort" %>
+<% end %>
+</div>
 <%= will_paginate @topics %>
 <%=  @topics.each do |topic| %>
     <section style="border: 1px solid black;padding: 10px;margin: 10px">
@@ -14,3 +21,7 @@
 <% end %>
 
 <%= will_paginate @topics %>
+
+<% if params[:commit]  %>
+    <%= show_params %>
+<% end %>

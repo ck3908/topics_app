@@ -27,7 +27,17 @@ class IdeasController < ApplicationController
   # show detailed info of list
   def list
     # @topics = Topic.all   - use will paginate gem instead
-    @topics = Topic.paginate(:page => params[:page], per_page: 5)
+    # creating options to sort list by various categories excluding categories like user_id
+    @columns = Topic.column_names
+    @exclude_columns = ["id","content","updated_at"]
+    @columns -= @exclude_columns
+    if params[:commit] == "sort"
+      @order_argument = params[:ordering]+" ASC"
+      @topics = Topic.order(@order_argument).paginate(:page => params[:page], per_page: 5)
+    else
+      @topics = Topic.paginate(:page => params[:page], per_page: 5)
+    end
+
   end
 
   def contact_us
