@@ -13,11 +13,12 @@
 
     <div class="field">
       <%= f.label :title %><br>
-      <%= f.text_field :title %>
+      <%= f.text_field :title, style: "width:400px;"%>
     </div>
     <div class="field">
       <%= f.label :sector %><br>
-      <%= f.text_field :sector %>
+      <%= f.select(:sector, options_for_select(@categories)) %>
+      <%#= f.text_field :sector, style: "width:200px;" %>
     </div>
     <div class="field">
       <%= f.label :content %><br>
@@ -25,7 +26,7 @@
     </div>
     <div class="field">
       <%= f.label :made_by %><br>
-      <%= f.text_field :made_by %>
+      <%= f.text_field :made_by, value: current_user.email %>
     </div>
     <div class="actions">
       <%= f.submit %>

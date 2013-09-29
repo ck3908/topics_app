@@ -10,7 +10,7 @@
 <%#= text_field_tag "name", nil, class: 'sampleclass', required: 'required' %>
     <%= text_field_tag "name", nil, class: 'sampleclass' %><br/>
     <%= label_tag "email address" %>
-    <%= email_field_tag "email address" %><br/>
+    <%= email_field_tag "email address", current_user.email %><br/>
     <%= label_tag "comments" %><br/>
     <%= text_field_tag "your comments", nil, style: "width:880px; height:150px;" %> <br/>
     <%= submit_tag "Submit your info" %>

@@ -19,6 +19,9 @@ class IdeasController < ApplicationController
   # GET /ideas/new
   def new
     @topic = Topic.new
+    @categories = ["automotive", "bio-tech", "computer", "construction", "education", "electronics", "entertainment", "food & dining",
+                    "health & medicine", "home & garden", "industrial", "legal & financial", "manufacturing", "media", "miscellaneous", "real estate", "technology",
+                    "travel"]
   end
 
   # show detailed info of list
