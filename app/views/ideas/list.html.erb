@@ -4,7 +4,11 @@
 <div>
   <%= form_tag({controller:  "ideas", action:  "list"}, method: "get") do %>
     Ordering options:
-    <%= select_tag "ordering", options_for_select(@columns, selected: params[:ordering]) %>
+    <%= select_tag "ordering", options_for_select(@columns, selected: params[:ordering]) %><br/>
+    <%= label_tag :order_asc, "ascending" %>
+    <%= radio_button_tag :order, :ASC, @order == "ASC" %>
+    <%= label_tag :order_dsc, "descending" %>
+    <%= radio_button_tag :order, :DESC, @order == "DESC" %>
     <%= submit_tag "sort" %>
 <% end %>
 </div>

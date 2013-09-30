@@ -31,8 +31,10 @@ class IdeasController < ApplicationController
     @columns = Topic.column_names
     @exclude_columns = ["id","content","updated_at"]
     @columns -= @exclude_columns
+    @order = params[:order]
     if params[:commit] == "sort"
-      @order_argument = params[:ordering]+" ASC"
+      # build the sql query string to sort
+      @order_argument = params[:ordering]+" "+ params[:order]
       @topics = Topic.order(@order_argument).paginate(:page => params[:page], per_page: 5)
     else
       @topics = Topic.paginate(:page => params[:page], per_page: 5)

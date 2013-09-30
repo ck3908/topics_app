@@ -10,7 +10,9 @@
 <%#= text_field_tag "name", nil, class: 'sampleclass', required: 'required' %>
     <%= text_field_tag "name", nil, class: 'sampleclass' %><br/>
     <%= label_tag "email address" %>
-    <%= email_field_tag "email address", current_user.email %><br/>
+    <!-- only if user signed is the email field populated, else leave blank -->
+    <!-- alternatively, use before_action: authentication for this page, but anyone should be able to use -->
+    <%= email_field_tag "email address", if user_signed_in? then current_user.email else "" end %><br/>
     <%= label_tag "comments" %><br/>
     <%= text_field_tag "your comments", nil, style: "width:880px; height:150px;" %> <br/>
     <%= submit_tag "Submit your info" %>
