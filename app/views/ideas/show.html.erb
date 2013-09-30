@@ -64,7 +64,7 @@
     </div>
     <div class="field">
       <%= f.label :author %><br>
-      <%= f.text_field :author %>
+      <%= f.text_field :author, value: current_user.email.split("@").first %>
     </div>
     <div class="field">
       <%= f.label :content %><br>

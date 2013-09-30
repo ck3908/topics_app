@@ -28,6 +28,11 @@ class ReviewsController < ApplicationController
     # nested routes created :topic_id to access the correct topic
     @topic = Topic.find(params[:topic_id])
     @review = @topic.reviews.create(title: params[:review][:title], author: params[:review][:author], content: params[:review][:content], rating: params[:review][:rating])
+    # update the rating average for the topic
+    @topic.avg_rating = @topic.reviews.average(:rating)
+    # save into database
+    @topic.save
+    puts "this is topic reviews average rating #{@topic.reviews.average(:rating)}"
     redirect_to idea_path(@topic)
 
   end

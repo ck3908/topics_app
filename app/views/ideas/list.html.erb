@@ -19,7 +19,7 @@
       Sector: <%= topic.sector %> <br/>
       Made By: <%= topic.made_by %><br/>
       Content: <%= topic.content %><br/>
-      Average Review Rating: <%= topic.reviews.average(:rating) %><br/>
+      Average Review Rating: <%= topic.reviews.average(:rating).to_i %><br/>
       Time created: <%= time_ago_in_words(topic.created_at) %> ago
     </section>
 
