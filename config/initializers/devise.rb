@@ -37,6 +37,8 @@ Devise.setup do |config|
   # to authenticate or find a user. Default is :email.
   config.case_insensitive_keys = [ :email ]
 
+  # 9/30 added this to see if it works with Heroku
+  config.secret_key = 'f8302500779765d206d63c7b80e3c0eb3064308d00a79b824b7ab648fef606999e2607a49d5457e929a43c8784e80c42d5c01f74135737c6f2efb31c99617617'  if Rails.env == 'production'
   # Configure which authentication keys should have whitespace stripped.
   # These keys will have whitespace before and after removed upon creating or
   # modifying a user and when used to authenticate or find a user. Default is :email.
