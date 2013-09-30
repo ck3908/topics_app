@@ -13,14 +13,14 @@
     <file path="/Ruby Console" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380525148877" ignored="false" />
     <file path="/ideas.html.erb" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1379883962835" ignored="false" />
     <file path="/login.html.erb" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1379880256294" ignored="false" />
-    <file path="/Dummy.txt" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380535449518" ignored="false" />
+    <file path="/Dummy.txt" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380539116670" ignored="false" />
     <file path="/_header_navigation.html.erb" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380427327665" ignored="false" />
     <file path="/topic.rb" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380399159227" ignored="false" />
     <file path="/index.html.erb" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380526989773" ignored="false" />
     <file path="/_form.html.erb" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380438126444" ignored="false" />
     <file path="/topics_controller.rb" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380305973468" ignored="false" />
     <file path="/list.html.erb" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380534923634" ignored="false" />
-    <file path="/Gemfile" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380067753922" ignored="false" />
+    <file path="/Gemfile" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380538977411" ignored="false" />
     <file path="/seeds.rb" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1379996498212" ignored="false" />
     <file path="/topics.html.erb" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380042134835" ignored="false" />
     <file path="/usertopics_controller.rb" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380044526663" ignored="false" />
@@ -84,10 +84,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="devise.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="devise.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="69" selection-start="2190" selection-end="2190" vertical-scroll-proportion="0.6548913">
+            <state line="39" column="69" selection-start="2190" selection-end="2190" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -102,10 +102,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="53" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
+            <state line="23" column="35" selection-start="408" selection-end="408" vertical-scroll-proportion="0.49081364">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/database.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -115,15 +124,6 @@
         <entry file="file://$PROJECT_DIR$/app/views/topics/list.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contact_us.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/ideas/contact_us.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="14" selection-start="907" selection-end="968" vertical-scroll-proportion="-8.423077">
               <folding />
             </state>
           </provider>
@@ -170,8 +170,8 @@
         <option value="$PROJECT_DIR$/app/views/ideas/contact_us.html.erb" />
         <option value="$PROJECT_DIR$/app/views/ideas/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/ideas/list.html.erb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -1042,13 +1042,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/ideas/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/ideas/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="69" selection-start="1360" selection-end="1360" vertical-scroll-proportion="-7.769231">
@@ -1142,16 +1135,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="53" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
+        <state line="39" column="69" selection-start="2190" selection-end="2190" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="69" selection-start="2190" selection-end="2190" vertical-scroll-proportion="0.6548913">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="35" selection-start="408" selection-end="408" vertical-scroll-proportion="0.49081364">
           <folding />
         </state>
       </provider>
