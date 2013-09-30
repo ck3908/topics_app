@@ -31,7 +31,8 @@ class IdeasController < ApplicationController
     @columns = Topic.column_names
     @exclude_columns = ["id","content","updated_at"]
     @columns -= @exclude_columns
-    @order = params[:order]
+    # set default value for parameters to build sql query
+    params[:order]? @order = params[:order] : @order = "ASC"
     if params[:commit] == "sort"
       # build the sql query string to sort
       @order_argument = params[:ordering]+" "+ params[:order]

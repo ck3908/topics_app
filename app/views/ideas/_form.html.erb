@@ -26,7 +26,7 @@
     </div>
     <div class="field">
       <%= f.label :made_by %><br>
-      <%= f.text_field :made_by, value: current_user.email %>
+      <%= f.text_field :made_by, value: if user_signed_in? then current_user.email else "" end %>
     </div>
     <div class="actions">
       <%= f.submit %>

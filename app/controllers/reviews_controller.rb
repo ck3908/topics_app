@@ -32,7 +32,7 @@ class ReviewsController < ApplicationController
     @topic.avg_rating = @topic.reviews.average(:rating)
     # save into database
     @topic.save
-    puts "this is topic reviews average rating #{@topic.reviews.average(:rating)}"
+    # puts "this is topic reviews average rating #{@topic.reviews.average(:rating)}"
     redirect_to idea_path(@topic)
 
   end

@@ -19,14 +19,13 @@
       Sector: <%= topic.sector %> <br/>
       Made By: <%= topic.made_by %><br/>
       Content: <%= topic.content %><br/>
+      Time created: <%= time_ago_in_words(topic.created_at) %> ago <br/><br/>
       Average Review Rating: <%= topic.reviews.average(:rating).to_i %><br/>
-      Time created: <%= time_ago_in_words(topic.created_at) %> ago
     </section>
 
 <% end %>
 
 <%= will_paginate @topics %>
 
-<% if params[:commit]  %>
-    <%= show_params %>
-<% end %>
+<!-- for debugging show params only on commit -->
+
