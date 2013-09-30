@@ -13,6 +13,7 @@
     <th>Sector</th>
     <th>Content</th>
     <th>Made by</th>
+    <th>Average Rating</th>
     <th>Time created</th>
     <th></th>
     <th></th>
@@ -28,7 +29,9 @@
         <td><%= topic.sector %></td>
         <td><%= truncate(topic.content, length: 90) %></td>
         <td><%= topic.made_by %></td>
+        <td><%= topic.reviews.average(:rating)  %></td>
         <td><%= time_ago_in_words(topic.created_at) %> ago </td>
+
         <!-- modify access to edit and destroy and modify path to ideas_index -->
         <td><%= link_to 'Show', ideas_id_path(topic.id) %></td>
         <% if user_signed_in? && current_user.admin? %>

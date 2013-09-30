@@ -54,6 +54,8 @@
 <%#= render :partial => 'reviews/form' %>
 
 <!-- create new form by using @topic model and create new review using build -->
+<p> Write a Review </p>
+
 <%= form_for([@topic, @topic.reviews.build]) do |f| %>
 
     <div class="field">
