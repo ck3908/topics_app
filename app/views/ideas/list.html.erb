@@ -13,7 +13,7 @@
 <% end %>
 </div>
 <%= will_paginate @topics %>
-<!-- becareful if using wrong html erb code, otherwise output to screen -->
+<!-- becareful if using wrong html % vs %=  erb code, otherwise output to screen, took a long time to debug why outputting -->
 <% @topics.each do |topic| %>
     <section style="border: 1px solid black;padding: 10px;margin: 10px">
       <h1><%= link_to topic.title, ideas_id_path(topic.id) %><br/></h1>
@@ -30,3 +30,6 @@
 
 <!-- for debugging show params only on commit -->
 
+<%# if params[:commit]  %>
+<%#= show_params %>
+<%# end %>

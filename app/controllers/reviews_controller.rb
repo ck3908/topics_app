@@ -2,6 +2,8 @@ class ReviewsController < ApplicationController
   #before_action :set_review, only: [:show, :edit, :update, :destroy]
   before_action :set_review, only: [:destroy]
 
+  # This controller manages the Review database
+
   # GET /reviews
   # GET /reviews.json
   #def index
@@ -27,6 +29,7 @@ class ReviewsController < ApplicationController
   def create
     # nested routes created :topic_id to access the correct topic
     @topic = Topic.find(params[:topic_id])
+    # originally had @review =@topic.reviews.create(params[:review]) but that keep getting errors??
     @review = @topic.reviews.create(title: params[:review][:title], author: params[:review][:author], content: params[:review][:content], rating: params[:review][:rating])
     # update the rating average for the topic
     @topic.avg_rating = @topic.reviews.average(:rating)

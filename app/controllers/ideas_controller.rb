@@ -7,18 +7,21 @@ class IdeasController < ApplicationController
   # GET /ideas.json
   def index
     # @topics = Topic.order("sector ASC").paginate(:page => params[:page], per_page: 15)
+    # retrieve and use paginate gem to show all Topic objects
     @topics = Topic.paginate(:page => params[:page], per_page: 15)
   end
 
   # GET /ideas/1
   # GET /ideas/1.json
   def show
+    # retrieve single topic
     @topic = Topic.find(params[:id])
   end
 
   # GET /ideas/new
   def new
     @topic = Topic.new
+    # create preset categories to help users create new topics
     @categories = ["automotive", "bio-tech", "computer", "construction", "education", "electronics", "entertainment", "food & dining",
                     "health & medicine", "home & garden", "industrial", "legal & financial", "manufacturing", "media", "miscellaneous", "real estate", "technology",
                     "travel"]
@@ -31,13 +34,14 @@ class IdeasController < ApplicationController
     @columns = Topic.column_names
     @exclude_columns = ["id","content","updated_at"]
     @columns -= @exclude_columns
-    # set default value for parameters to build sql query
+    # set default value to ASC first to build sql query - subsequently will be sticky key
     params[:order]? @order = params[:order] : @order = "ASC"
     if params[:commit] == "sort"
       # build the sql query string to sort
       @order_argument = params[:ordering]+" "+ params[:order]
       @topics = Topic.order(@order_argument).paginate(:page => params[:page], per_page: 5)
     else
+      # no options chosen, so just paginate Topic objects in order that they appear in database
       @topics = Topic.paginate(:page => params[:page], per_page: 5)
     end
 
@@ -47,6 +51,7 @@ class IdeasController < ApplicationController
     # correct syntax for hash with two words: @contact = params[:"contact us"] - put "contact us" in the field_tag name too.
     @name = params[:name]
     @email = params[:"email address"]
+    # Don't really need these checks since using Devise gem for authentication - here just for me to reference in the future
     if params[:commit]
       flash[:error] = ""
       if @name.nil? || @name.empty?

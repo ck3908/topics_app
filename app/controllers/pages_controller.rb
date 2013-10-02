@@ -2,6 +2,8 @@ class PagesController < ApplicationController
   # before_filter - calls the method that initializes global instance variables that is 
   # available across all methods for that one instance during the call into PagesController
   # so all of the instance variables are accessible throughout
+
+  ######## THIS CONTROLLER IS NOT USED IN THE PROJECT - WAS USED IN THE BEGINNING FOR TESTING ##########
   before_filter :home
   def home
     @categories = %w(finance retail energy technology biotech real_estate industrial beverage)

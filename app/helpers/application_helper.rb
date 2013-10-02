@@ -1,5 +1,7 @@
 module ApplicationHelper
 
+  # pass links then build a list of HTML links - just to play around
+  # older convention
 	def outside_links_old (links)
 		# key = URL, value = body
 		html = "<ul>"
@@ -10,6 +12,7 @@ module ApplicationHelper
 		return html.html_safe
 	end
 
+  # newer convention
 	def outside_links (links)
 		# key = URL, value = body
 		html = "<ul>"
@@ -20,6 +23,7 @@ module ApplicationHelper
 		return html.html_safe
 	end
 
+  # this is for debugging purposes to print out params array for inspection
 	def show_params
 		html = "<div style = 'border:1px red solid; margin: 10px ; padding: 10px;'>"
 		html += '<heading>Params</heading><br/>'
