@@ -20,7 +20,7 @@ puts n.inspect
 puts p.inspect
 puts q.inspect
 
-3.times do
+25.times do
   a = Topic.create(:title => Company.catch_phrase,
                    :sector => Commerce.department ,
                    :content => Lorem.paragraphs(2).join(", "),
