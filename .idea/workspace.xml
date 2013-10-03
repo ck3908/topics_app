@@ -25,7 +25,7 @@
     <file path="/topics.html.erb" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380042134835" ignored="false" />
     <file path="/usertopics_controller.rb" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380044526663" ignored="false" />
     <file path="/ideas_controller.rb" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380610965239" ignored="false" />
-    <file path="/show.html.erb" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380786076822" ignored="false" />
+    <file path="/show.html.erb" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380786314137" ignored="false" />
     <file path="/reviews_controller.rb" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380611238309" ignored="false" />
     <file path="/review.rb" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380363402311" ignored="false" />
     <file path="/devise.rb" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380537899094" ignored="false" />
@@ -51,7 +51,7 @@
     <file path="$PROJECT_DIR$/../../herokuclone/gentle-forest-9995/app/models/topic.rb" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380568904613" ignored="false" />
     <file path="$PROJECT_DIR$/../../finaltemp/topics_app/app/views/ideas/list.html.erb" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380572086992" ignored="false" />
     <file path="/application_helper.rb" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380611449344" ignored="false" />
-    <file path="/style.css" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380740108198" ignored="false" />
+    <file path="/style.css" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380786797155" ignored="false" />
     <file path="/production.rb" changelist="c7549522-0c0e-43e1-99a5-7137d19c330f" time="1380769347024" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,10 +81,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="184" column="27" selection-start="3416" selection-end="3416" vertical-scroll-proportion="0.0">
+            <state line="43" column="42" selection-start="735" selection-end="735" vertical-scroll-proportion="0.6314286">
               <folding />
             </state>
           </provider>
@@ -108,10 +108,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/ideas/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="36" selection-start="1259" selection-end="1259" vertical-scroll-proportion="0.33333334">
+            <state line="43" column="35" selection-start="1258" selection-end="1258" vertical-scroll-proportion="-4.1538463">
               <folding />
             </state>
           </provider>
@@ -198,10 +198,10 @@
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/ideas/list.html.erb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/app/views/ideas/contact_us.html.erb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/app/views/ideas/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/style.css" />
       </list>
     </option>
   </component>
@@ -1129,13 +1129,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="184" column="27" selection-start="3416" selection-end="3416" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/ideas_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1195,7 +1188,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/ideas/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="36" selection-start="1259" selection-end="1259" vertical-scroll-proportion="0.33333334">
+        <state line="43" column="35" selection-start="1258" selection-end="1258" vertical-scroll-proportion="-4.1538463">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="42" selection-start="735" selection-end="735" vertical-scroll-proportion="0.6314286">
           <folding />
         </state>
       </provider>
