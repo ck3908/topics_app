@@ -29,7 +29,7 @@ A:hover {
 }
 
 #header_wrapper {
-  background: #4E7DD1 url('menu_bg.gif') bottom left repeat-x;
+  background: #4E7DD1 image-url("menu_bg.gif") bottom left repeat-x;
   margin:0px; padding:0px;
 }
 
@@ -60,14 +60,14 @@ A:hover {
   margin-top: 10px;
   float: left;
   width: 160px;
-  background: #F1F6FE url('side_bg.gif') bottom left repeat-x;
+  background: #F1F6FE asset-url("side_bg.gif", image) bottom left repeat-x;
 }
 
 #right_side {
   margin-top: 10px;
   float: right;
   width: 160px;
-  background: #F1F6FE url('side_bg.gif') bottom left repeat-x;
+  background: #F1F6FE url ('side_bg.gif') bottom left repeat-x;
 }
 
 #content {
